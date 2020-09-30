@@ -10,7 +10,7 @@ import static jdk.nashorn.internal.objects.NativeMath.round;
 
 public class findWordLengthFrequency implements IWordFrequency {
     public Map<Integer, Double> findWordLengthFrequencyMethod(File file) throws FileNotFoundException {
-        Scanner s = new Scanner(file);
+        Scanner s = new Scanner(file,"UTF-8");
         ArrayList<String> words = new ArrayList<>();
         ArrayList<Integer> word_count = new ArrayList<>();
         Map<Integer, Double> wordLength = new HashMap<>();
@@ -23,7 +23,6 @@ public class findWordLengthFrequency implements IWordFrequency {
             String resultString1 = i.replaceAll("\\p{Punct}", "");
             word_count.add(resultString1.length());
         }
-        System.out.println(words.size());
         Collections.sort(word_count);
         for (int i = 0; i < Collections.max(word_count); i++) {
             if (!wordLength.containsKey(i)) {

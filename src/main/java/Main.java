@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
         findWordLengthFrequency Word_Length = new findWordLengthFrequency();
-        File A_Tale_of_Two_Cities = new File("src\\A Tale of Two Cities.txt");
-        File Great_Expectations = new File("C:\\Users\\Daniel Bashary\\IdeaProjects\\author-fingerprint-basharyd\\src\\Great Expectations.txt");
+        File A_Tale_of_Two_Cities = new File("C:\\Users\\Daniel Bashary\\IdeaProjects\\author-fingerprint-basharyd\\src\\ATaleofTwoCities.txt");
+        File Great_Expectations = new File("C:\\Users\\Daniel Bashary\\IdeaProjects\\author-fingerprint-basharyd\\src\\GreatExpectations.txt");
         File Hamlet = new File("C:\\Users\\Daniel Bashary\\IdeaProjects\\author-fingerprint-basharyd\\src\\Hamlet.txt");
         File Macbeth = new File("C:\\Users\\Daniel Bashary\\IdeaProjects\\author-fingerprint-basharyd\\src\\Macbeth.txt");
         Word_Length.printWordCount(Word_Length.findWordLengthFrequencyMethod(A_Tale_of_Two_Cities), "A Tale of Two Cities");
@@ -19,5 +19,6 @@ public class Main {
         pw.println("If you look at the amount of times the smaller words are used it seems as if their fingerprints are very similar." +
                 "The difference comes in the longer words where I noticed that shakespeare uses a few more words." +
                 "It isn't a very significant amount though, but it is enough where you can tell that Dickens uses smaller words more often. ");
+        pw.close();
     }
 }

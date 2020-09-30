@@ -1,0 +1,64 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['bar']});
+        google.charts.setOnLoadCallback(drawStuff);
+
+
+        function drawStuff() {
+            var data = new google.visualization.arrayToDataTable([
+                ['Word Count', 'Word Frequency'],
+                ["0", 14],
+                ["1", 10018],
+                ["2", 35209],
+                ["3", 42989],
+                ["4", 35913],
+                ["5", 19460],
+                ["6", 13387],
+                ["7", 11670],
+                ["8", 7180],
+                ["9", 4875],
+                ["10", 3107],
+                ["11", 1760],
+                ["12", 978],
+                ["13", 578],
+                ["14", 228],
+                ["15", 111],
+                ["16", 40],
+                ["17", 27],
+                ["18", 24],
+                ["19", 3],
+                ["20", 8],
+                ["21", 7],
+                ["22", 2],
+                ["23", 2],
+                ["24", 1],
+                ["25", 1],
+                ["26", 1],
+            ]);
+
+            var options = {
+                width: 800,
+                legend: { position: 'none' },
+                chart: {
+                    title: 'Great Expectations',
+                    subtitle: 'popularity by percentage' },
+                axes: {
+                    x: {
+                        0: { side: 'top', label: 'Word Count'} // Top x-axis.
+                    }
+                },
+                bar: { groupWidth: "90%" }
+            };
+
+            var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+            // Convert the Classic options to Material options.
+            chart.draw(data, google.charts.Bar.convertOptions(options));
+        };
+    </script>
+</head>
+<body>
+<div id="top_x_div" style="width: 800px; height: 600px;"></div>
+</body>
+</html>
