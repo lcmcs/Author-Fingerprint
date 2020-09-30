@@ -23,6 +23,7 @@ public class findWordLengthFrequency implements IWordFrequency {
             String resultString1 = i.replaceAll("\\p{Punct}", "");
             word_count.add(resultString1.length());
         }
+        System.out.println(words.size());
         Collections.sort(word_count);
         for (int i = 0; i < Collections.max(word_count); i++) {
             if (!wordLength.containsKey(i)) {
